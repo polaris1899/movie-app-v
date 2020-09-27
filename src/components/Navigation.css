@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+  }
+
+.nav a {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    margin-left: 50px;
+    padding: 8px;
+}
+
+.nav {
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    font-size: 18px;
+}
+
+.nav a:hover {
+    border-bottom: orange solid 3px;
+    transform: scale(1.1);
+    transition: all var(--animation-duration) ease-in;
+}
