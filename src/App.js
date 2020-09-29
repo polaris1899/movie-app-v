@@ -4,8 +4,8 @@ import Home from "./router/Home";
 import About from "./router/About";
 import Favorite from "./router/Favorite";
 import Detail from "./router/Detail";
-import Navigation from "./components/Navigation";
 import Sidenav from "./components/Sidenav";
+import Navigation from "./components/Navigation";
 import "./App.css";
 
 function App() {
