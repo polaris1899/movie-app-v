@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Movie.css';
 
-function Movie({ id, year, title, summary, poster, genres }) {
+function Movie({ id, year, title, rating, poster }) {
     return (
         <div className='movie'>
             <Link
@@ -12,26 +12,19 @@ function Movie({ id, year, title, summary, poster, genres }) {
                 state: {
                     year,
                     title,
-                    summary,
+                    rating,
                     poster,
-                    genres
-            }
-        }}
+                }     
+            }}
             >
-                <img src={poster} alt={title} title={title} />
-                <div className="movie__data">
-                    <h3 className="movie__title">{title.slice(0, 40)}</h3>
-                    <h5 className="movie__year">{year}</h5>
-                    <ul className="movie__genres">
-                        {genres && genres . map((genre, index) => (
-                         <li key={index} className="genres__genre">
-                            {genre}
-                        </li>
-                    ))}
-                    </ul>
-                    <p className='movie__summary'> {summary.slice(0, 180)}...</p>
-                </div>
+                <img src={poster} alt={title} title={title} />            
             </Link>
+            <div className="movie__data">
+                <h3 className="movie__title">{title.slice(0, 10)}...</h3>
+                <h5 className="movie__year">{year}</h5>
+                <Link to={ `/movie/${id}`} >Read more</Link>
+                <p className='movie__rating'> {rating}</p>
+            </div>
         </div>
     );
 }
@@ -40,7 +33,7 @@ Movie.propTypes = {
     id: PropTypes.number.isRequired,
     year: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
-    summary: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
     poster: PropTypes.string.isRequired,
     genres: PropTypes.arrayOf(PropTypes.string)
 }

@@ -1,10 +1,13 @@
 section.container {
-  position: absolute;
-  top: 80px;
-  left: 170px;
+  color: white;
+  padding-left: 200px;
+  padding-top: 120px;
+  height: 100%;
+  width: 100%;
 }
 
 .loader {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,12 +15,13 @@ section.container {
 }
 
 .movies {
-  width: 80%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
-  padding: 50px;
-  padding-top: 70px;
+  padding-top: 50px;
 }
 
+.movie__nav {
+  margin-left: 25px;
+}
