@@ -12,7 +12,7 @@ function Navigation() {
             <div className='nav'>
                 <Link to='/'>Home</Link>
                 <Link to='/Favorite'>Favorite</Link>
-                <Link to='/about'>About</Link>
+                <Link to='/About'>About</Link>
             </div>
         </header>
     );

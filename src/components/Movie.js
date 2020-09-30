@@ -20,7 +20,7 @@ function Movie({ id, year, title, rating, poster }) {
                 <img src={poster} alt={title} title={title} />            
             </Link>
             <div className="movie__data">
-                <h3 className="movie__title">{title.slice(0, 10)}...</h3>
+                <h3 className="movie__title">{title.length > 15 ? title.substring(0, 15) + "..." : title}</h3>
                 <h5 className="movie__year">{year}</h5>
                 <Link to={ `/movie/${id}`} >Read more</Link>
                 <p className='movie__rating'> {rating}</p>

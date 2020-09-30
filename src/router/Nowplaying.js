@@ -3,7 +3,7 @@ import axios from 'axios';
 import Movie from '../components/Movie';
 import './Home.css';
 
-class Home extends React.Component {
+class Nowplaying extends React.Component {
   state = { 
     isLoading: true,
     movie: [ ]
@@ -14,7 +14,7 @@ class Home extends React.Component {
         data: {movies}
       }
     } = await axios.get(
-      "https://yts-proxy.now.sh/list_movies.json?sort_by=rating"
+      "https://yts-proxy.now.sh/list_movies.json?sort_by=year"
     );
     this.setState({ movies, isLoading:false });
   };
@@ -31,7 +31,7 @@ class Home extends React.Component {
           </div>
         ) : (
           <div className='movie__container'>
-            <h1 className='movie__nav'>Top Rated</h1>
+            <h1 className='movie__nav'>Now playing</h1>
             <div className='movies'>
               { movies.map ( movie => (
                 < Movie 
@@ -52,4 +52,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default Nowplaying;

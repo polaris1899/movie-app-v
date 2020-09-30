@@ -12,7 +12,7 @@ div .sidenav{
 
 .movie__filter ul {
     padding-left: 10px;
-    margin-top: 130px;
+    margin-top: 170px;
 }
 
  .movie__filter a {
@@ -23,7 +23,7 @@ div .sidenav{
 }
 
 .filter__list {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     padding: 20px 10px;
     font-size: 17px;
 }

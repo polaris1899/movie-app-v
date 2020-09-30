@@ -1,0 +1,10 @@
+.about__container {
+    color: white;
+    padding-top: 120px;
+    padding-left: 200px;
+    margin-left: 25px;
+}
+
+.about__container h1 {
+    margin-bottom: 50px;
+}

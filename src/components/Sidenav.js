@@ -13,10 +13,9 @@ function Sidenav() {
         <div className="sidenav">
             <div className='movie__filter'>
                 <ul>
-                    <Link to='/popular'><li className='filter__list'><FontAwesomeIcon icon={faFire} />   Popular</li></Link>
-                    <Link to='/toprated'><li className='filter__list'><FontAwesomeIcon icon={faStar} />   Top Rated</li></Link>
-                    <Link to='/nowplaying'><li className='filter__list'><FontAwesomeIcon icon={faSketch} />   Now Playing</li></Link>
-                    <Link to='/upcoming'><li className='filter__list'><FontAwesomeIcon icon={faHourglass} />   Upcoming</li></Link>
+                    <Link to='/'><li className='filter__list'><FontAwesomeIcon icon={faStar} />   Top Rated</li></Link>
+                    <Link to='/Nowplaying'><li className='filter__list'><FontAwesomeIcon icon={faSketch} />   Now Playing</li></Link>
+                    <Link to='/Uploaded'><li className='filter__list'><FontAwesomeIcon icon={faHourglass} />   Uploaded</li></Link>
                 </ul>
             </div>
             <div className="footer">
