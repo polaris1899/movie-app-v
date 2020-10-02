@@ -1,0 +1,77 @@
+.background-poster {
+    display: none;
+}
+
+.solo-poster{
+    margin-right: 100px;
+}
+
+.solo-poster img{
+   width: 300px;
+}
+
+.individual-movie-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.solo-title {
+    margin-bottom: 20px;
+}
+
+.solo-genres {
+    margin-bottom: 30px;
+    color: darkorange;
+}
+
+.solo-rating {
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.solo-summary {
+   padding-right: 100px;
+   margin-bottom: 50px;
+}
+
+.addfav {
+    width: 130px;
+    height: 30px;
+    background-color: rgb(255, 123, 0);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(148,145,146,1);
+    color: white;
+    font-size: 12px;
+    margin-bottom: 30px;
+}
+
+@media (min-width: 1260px) {
+    section.section {
+        position: absolute;
+        top: 100px;
+        left: 170px;
+        color: white;
+    }
+
+    .background-poster {
+        display: block;
+        filter: grayscale(60%) brightness(30%) drop-shadow(0 0 0.75rem rgb(3, 3, 3));
+        position: absolute;
+        z-index: -1;
+        margin-top: 0px;
+        margin-left: -30px;
+        width: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+
+    .individual-movie-container{
+        display: flex;
+        flex-direction: row;
+        margin-top: 80px;
+        margin-left: 150px;
+    }
+
+}

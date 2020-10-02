@@ -18,7 +18,7 @@ function App() {
       <Route path="/" exact={true} component={Home} />
       <Route path="/about" component={About} />
       <Route path="/favorite" component={Favorite} />
-      <Route path="/Detail" component={Detail} />
+      <Route path="/movie/:id" component={Detail} />
       <Route path="/nowplaying" component={Nowplaying} />
       <Route path="/uploaded" component={Uploaded} />
     </HashRouter>

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSketch } from '@fortawesome/free-brands-svg-icons'
 import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { faFire } from "@fortawesome/free-solid-svg-icons";
 import { faHourglass } from "@fortawesome/free-solid-svg-icons";
 import './Sidenav.css';
 

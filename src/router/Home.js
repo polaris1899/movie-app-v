@@ -41,6 +41,9 @@ class Home extends React.Component {
                     title={movie.title}
                     rating={movie.rating}
                     poster={movie.medium_cover_image}
+                    genres={movie.genres}
+                    image={movie.background_image}
+                    summary={movie.summary}
                 />
               ))}
             </div>

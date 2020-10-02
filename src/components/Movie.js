@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Movie.css';
 
-function Movie({ id, year, title, rating, poster }) {
+function Movie({ id, year, title, rating, poster, genres, image, summary }) {
     return (
         <div className='movie'>
             <Link
@@ -14,15 +14,32 @@ function Movie({ id, year, title, rating, poster }) {
                     title,
                     rating,
                     poster,
+                    genres,
+                    image,
+                    summary
                 }     
             }}
             >
-                <img src={poster} alt={title} title={title} />            
+                <img src={poster} alt={title} title={title} />          
             </Link>
             <div className="movie__data">
                 <h3 className="movie__title">{title.length > 15 ? title.substring(0, 15) + "..." : title}</h3>
                 <h5 className="movie__year">{year}</h5>
-                <Link to={ `/movie/${id}`} >Read more</Link>
+                <Link
+             to={{
+                pathname: `/movie/${id}`,
+                state: {
+                    year,
+                    title,
+                    rating,
+                    poster,
+                    genres,
+                    image,
+                    summary
+                }     
+            }}
+            > Read more     
+            </Link>
                 <p className='movie__rating'> {rating}</p>
             </div>
         </div>
@@ -35,7 +52,9 @@ Movie.propTypes = {
     title: PropTypes.string.isRequired,
     rating: PropTypes.number.isRequired,
     poster: PropTypes.string.isRequired,
-    genres: PropTypes.arrayOf(PropTypes.string)
+    genres: PropTypes.arrayOf(PropTypes.string),
+    image: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired
 }
 
 export default Movie;
